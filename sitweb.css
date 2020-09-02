@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F2E1C2;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    font-family: 'Lora', serif;
+    perspective: 800px;
+}
+/*
+çela veut dire je veux tous les liens qui comment par http avoir la coleur rouge*/
+/*
+a[href^="http"]{
+    color: red;
+}
+
+
+
+    font-family: 'Lora', serif;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Oswald', sans-serif;
+
+
+*/
+.header{
+    background-image: linear-gradient(to top, rgba(112, 106, 106, 0), rgb(42, 49, 22)), url("vr.gnp.jpg");
+    background-image: linear-gradient(to bottom, #F2D194, transparent), url("vr.gnp.jpg");
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 80% / 30% 60%;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-attachment:  local, fixed;
+    padding: 30px;
+    color: #FFFFFF;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.header-title{
+    margin: 0;
+    font-style: italic;
+    text-transform: capitalize;
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 100px;
+   
+    text-shadow: 1px 1px 2px #D697FF, 0 0 1em blue, 0 0 0.2em #000;
+    
+/*le titre passe au dessus de nav-links
+ font-family: 'Pacifico', cursive;
+ */
+}
+
+.header-nav{
+    overflow: hidden;
+    margin-top: 10px;  
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header img{
+    width: 100%;
+    height: auto;
+}
+
+.header-nav .lien  {
+    
+    font-weight: bold;
+    font-size: 20px;
+    padding: 50px;
+    color: inherit;
+    text-decoration: none;
+    
+    
+}
+
+.header-nav a:hover{
+    color: black;
+    
+    
+    
+}
+
+.bouton{
+    text-align: center;
+    border:none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 50px;  
+    font-weight: bold;
+    background-color: #D99982;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    margin-top: 100px;
+    color: white;
+    font-size: 20px;
+}
+.bouton:hover{
+    cursor: pointer;
+    
+}
+
+.ensemble{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-top: -3%;
+    
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+.arrondi{
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius: 20px;
+    
+    
+}
+.image2:hover img {
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+	transform: scale(1.3);
+}
+.image2 img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.image2{
+    padding: 20px;
+    margin-top: 0;
+    
+}
+.picture{
+    float: left;
+    margin-right: 15px;
+}
+.main{
+    padding: 30px;
+    margin: 30px;
+}
+
+
+/* accordion menu */
+.middle{
+  
+   
+    overflow: hidden;
+    
+}
+
+.menu{
+   
+   
+    overflow: hidden;
+    padding: 4px;
+    
+}
+.item{
+   
+    overflow: hidden;
+}
+.btn{
+    display: block;
+    background: #D99982;
+    border-radius:  7px 7px 0px 0px;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+
+}
+a .style{
+    font-size: 20px;
+}
+
+.smenu{
+  
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+    background: #D99982;
+    border-radius: 0px 0px 7px 7px;
+  
+}
+
+.smenu a{
+    display: block;
+    padding: 16px 26px;
+    color: black;
+    font-size: 15px;
+  
+    margin: 4px 0;
+    position: relative;
+ 
+}
+.smenu a::before{
+    content: "";
+    position: absolute;
+    width: 7%;
+    height: 100%;
+    background: #FFFFFF;
+    left: 0;
+    top: 0;
+    transition: 0.1s;
+    opacity: 0;
+}
+.smenu a:hover::before{
+    opacity: 1;
+
+}
+.item:target .smenu{
+    max-height: 7em;
+
+}
